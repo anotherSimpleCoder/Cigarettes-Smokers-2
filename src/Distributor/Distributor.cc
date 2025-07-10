@@ -14,7 +14,7 @@ void Distributor::run() {
 	while(true) {
 		int chosenSmoker = dis(gen);
 		csContext->chosenSmoker = chosenSmoker;
-		csContext->smokers[chosenSmoker].release();
+		csContext->smokers->at(chosenSmoker).release();
 		csContext->table->release();
 	}
 }

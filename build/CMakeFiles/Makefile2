@@ -166,7 +166,8 @@ src/Smoker/clean: src/Smoker/CMakeFiles/Smoker.dir/clean
 # Target rules for target src/Main/CMakeFiles/Main.dir
 
 # All Build rule for target.
-src/Main/CMakeFiles/Main.dir/all:
+src/Main/CMakeFiles/Main.dir/all: src/Distributor/CMakeFiles/Distributor.dir/all
+src/Main/CMakeFiles/Main.dir/all: src/Smoker/CMakeFiles/Smoker.dir/all
 	$(MAKE) $(MAKESILENT) -f src/Main/CMakeFiles/Main.dir/build.make src/Main/CMakeFiles/Main.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/Main/CMakeFiles/Main.dir/build.make src/Main/CMakeFiles/Main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/amsakan/dev/cigarette-smokers/build/CMakeFiles --progress-num=3,4 "Built target Main"
@@ -174,7 +175,7 @@ src/Main/CMakeFiles/Main.dir/all:
 
 # Build rule for subdir invocation for target.
 src/Main/CMakeFiles/Main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/amsakan/dev/cigarette-smokers/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amsakan/dev/cigarette-smokers/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Main/CMakeFiles/Main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/amsakan/dev/cigarette-smokers/build/CMakeFiles 0
 .PHONY : src/Main/CMakeFiles/Main.dir/rule

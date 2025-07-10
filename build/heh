@@ -1,0 +1,35 @@
+/home/amsakan/dev/cigarette-smokers/src/Main/Main.cc: In function ‘int main(int, char**)’:
+/home/amsakan/dev/cigarette-smokers/src/Main/Main.cc:14:31: error: use of deleted function ‘std::array<Smoker, 3>::array()’
+   14 |         std::array<Smoker, 3> smokers;
+      |                               ^~~~~~~
+In file included from /home/amsakan/dev/cigarette-smokers/src/Main/Main.cc:1:
+/usr/include/c++/12/array:99:12: note: ‘std::array<Smoker, 3>::array()’ is implicitly deleted because the default definition would be ill-formed:
+   99 |     struct array
+      |            ^~~~~
+/usr/include/c++/12/array:99:12: error: no matching function for call to ‘Smoker::Smoker()’
+In file included from /home/amsakan/dev/cigarette-smokers/src/Main/Main.cc:7:
+/home/amsakan/dev/cigarette-smokers/include/Smoker.hh:10:9: note: candidate: ‘Smoker::Smoker(int, CS_Context*)’
+   10 |         Smoker(int id, CS_Context* csContext);
+      |         ^~~~~~
+/home/amsakan/dev/cigarette-smokers/include/Smoker.hh:10:9: note:   candidate expects 2 arguments, 0 provided
+/home/amsakan/dev/cigarette-smokers/include/Smoker.hh:5:7: note: candidate: ‘constexpr Smoker::Smoker(const Smoker&)’
+    5 | class Smoker{
+      |       ^~~~~~
+/home/amsakan/dev/cigarette-smokers/include/Smoker.hh:5:7: note:   candidate expects 1 argument, 0 provided
+/home/amsakan/dev/cigarette-smokers/include/Smoker.hh:5:7: note: candidate: ‘constexpr Smoker::Smoker(Smoker&&)’
+/home/amsakan/dev/cigarette-smokers/include/Smoker.hh:5:7: note:   candidate expects 1 argument, 0 provided
+/home/amsakan/dev/cigarette-smokers/src/Main/Main.cc:16:14: error: ‘transform’ is not a member of ‘std’
+   16 |         std::transform(ids.begin(), ids.end(), smokers.begin(), [csContext](int id){return Smoker(id, &csContext);});
+      |              ^~~~~~~~~
+/home/amsakan/dev/cigarette-smokers/src/Main/Main.cc: In lambda function:
+/home/amsakan/dev/cigarette-smokers/src/Main/Main.cc:16:103: error: invalid conversion from ‘const CS_Context*’ to ‘CS_Context*’ [-fpermissive]
+   16 |         std::transform(ids.begin(), ids.end(), smokers.begin(), [csContext](int id){return Smoker(id, &csContext);});
+      |                                                                                                       ^~~~~~~~~~
+      |                                                                                                       |
+      |                                                                                                       const CS_Context*
+/home/amsakan/dev/cigarette-smokers/include/Smoker.hh:10:36: note:   initializing argument 2 of ‘Smoker::Smoker(int, CS_Context*)’
+   10 |         Smoker(int id, CS_Context* csContext);
+      |                        ~~~~~~~~~~~~^~~~~~~~~
+gmake[2]: *** [src/Main/CMakeFiles/Main.dir/build.make:79: src/Main/CMakeFiles/Main.dir/Main.cc.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:172: src/Main/CMakeFiles/Main.dir/all] Error 2
+gmake: *** [Makefile:91: all] Error 2

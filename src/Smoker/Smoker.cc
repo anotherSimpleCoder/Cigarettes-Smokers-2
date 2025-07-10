@@ -9,7 +9,7 @@ Smoker::Smoker(int id, CS_Context* csContext) {
 
 void Smoker::run() {
 	while(true) {
-		this->csContext->smokers[this->id].acquire();
+		this->csContext->smokers->at(this->id).acquire();
 		this->csContext->table->acquire();
 		std::cout << "Smoker " << this->id << " is smoking\n";
 	}

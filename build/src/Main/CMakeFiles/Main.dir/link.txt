@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/Main.dir/Main.cc.o -o Main
+/usr/bin/c++ CMakeFiles/Main.dir/Main.cc.o -o Main  ../Smoker/libSmoker.a ../Distributor/libDistributor.a

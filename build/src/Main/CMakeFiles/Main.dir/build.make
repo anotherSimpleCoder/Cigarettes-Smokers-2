@@ -95,6 +95,8 @@ Main_EXTERNAL_OBJECTS =
 
 src/Main/Main: src/Main/CMakeFiles/Main.dir/Main.cc.o
 src/Main/Main: src/Main/CMakeFiles/Main.dir/build.make
+src/Main/Main: src/Smoker/libSmoker.a
+src/Main/Main: src/Distributor/libDistributor.a
 src/Main/Main: src/Main/CMakeFiles/Main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/amsakan/dev/cigarette-smokers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Main"
 	cd /home/amsakan/dev/cigarette-smokers/build/src/Main && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Main.dir/link.txt --verbose=$(VERBOSE)
