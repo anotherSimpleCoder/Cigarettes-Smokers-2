@@ -1,0 +1,2 @@
+/usr/bin/ar qc libDistributor.a CMakeFiles/Distributor.dir/Distributor.cc.o
+/usr/bin/ranlib libDistributor.a

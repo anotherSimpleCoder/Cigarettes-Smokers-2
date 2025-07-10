@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/amsakan/dev/cigarette-smokers/build/cmake_install.cmake",
+		"/home/amsakan/dev/cigarette-smokers/build/src/cmake_install.cmake",
+		"/home/amsakan/dev/cigarette-smokers/build/src/Main/cmake_install.cmake",
+		"/home/amsakan/dev/cigarette-smokers/build/src/Distributor/cmake_install.cmake",
+		"/home/amsakan/dev/cigarette-smokers/build/src/Smoker/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

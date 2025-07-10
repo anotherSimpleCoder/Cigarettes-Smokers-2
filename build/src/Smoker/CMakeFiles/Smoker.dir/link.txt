@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSmoker.a CMakeFiles/Smoker.dir/Smoker.cc.o
+/usr/bin/ranlib libSmoker.a
