@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CS_CONTEXT_HH
+#define CS_CONTEXT_HH
 
 #include <array>
 #include <semaphore>
@@ -11,19 +12,6 @@ struct CS_Context {
 	unsigned int chosenSmoker;
 };
 
-CS_Context newCSContext() {
-	std::array<std::binary_semaphore, 3> smokers = {
-		std::binary_semaphore{0},
-		std::binary_semaphore{0},
-		std::binary_semaphore{0}
-	};
+CS_Context newCSContext();
 
-	std::binary_semaphore table{0};
-	unsigned int chosenSmoker = -1;
-
-	return {
-		&table,
-		&smokers,
-		chosenSmoker
-	};
-}
+#endif

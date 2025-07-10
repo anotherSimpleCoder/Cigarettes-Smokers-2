@@ -5,4 +5,5 @@ add_executable(Main
 target_link_libraries(Main
 	Smoker
 	Distributor
+	CS_Context
 )
